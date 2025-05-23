@@ -26,12 +26,28 @@ git clone https://github.com/yourusername/FoodAnalyzer.git
 
 2. Open `FoodAnalyzer.xcodeproj` in Xcode
 
-3. Configure your API key:
-   - Open `Config.swift`
-   - Replace `YOUR_API_KEY_HERE` with your OpenAI API key
+3. Set up the configuration file:
+   ```bash
+   # Navigate to the project directory
+   cd FoodAnalyzer
+   
+   # Copy the example config file
+   cp Config.swift.example Config.swift
+   ```
+
+4. Configure your API key:
+   - Open the newly created `Config.swift`
+   - Replace `YOUR-OPENAI-API-KEY-HERE` with your actual OpenAI API key
    - Never commit your actual API key to version control
 
-4. Build and run the project
+5. Build and run the project
+
+## Important Note About Configuration
+
+The `Config.swift` file is intentionally excluded from version control to protect sensitive API keys. Each developer needs to:
+1. Copy `Config.swift.example` to `Config.swift`
+2. Add their own OpenAI API key
+3. Keep their API key private and never commit it
 
 ## Architecture
 

@@ -1,5 +1,6 @@
 import Foundation
 
 struct Config {
-    static let openAIAPIKey = "YOUR_API_KEY_HERE"
+    // Replace this with your OpenAI API key
+    static let openAIAPIKey: String = "YOUR-OPENAI-API-KEY-HERE"
 }
