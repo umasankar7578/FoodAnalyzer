@@ -2,6 +2,8 @@
 
 An iOS app that analyzes food using OpenAI's Vision API to provide nutritional information.
 
+GitHub Repository: https://github.com/umasankar7578/FoodAnalyzer
+
 ## Features
 
 - 📸 Camera integration for food photo capture
