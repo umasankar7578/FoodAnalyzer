@@ -2,5 +2,16 @@ import Foundation
 
 struct Config {
     // Replace this with your OpenAI API key
-    static let openAIAPIKey: String = "YOUR-OPENAI-API-KEY-HERE"
+    static let openAIAPIKey: String = {
+        let key = "YOUR-OPENAI-API-KEY-HERE"
+        precondition(key != "YOUR-OPENAI-API-KEY-HERE", """
+            ⚠️ Please configure your OpenAI API key:
+            1. Copy Config.swift.example to Config.swift
+            2. Open Config.swift
+            3. Replace "YOUR-OPENAI-API-KEY-HERE" with your actual OpenAI API key
+            
+            See README.md for detailed instructions.
+            """)
+        return key
+    }()
 }
