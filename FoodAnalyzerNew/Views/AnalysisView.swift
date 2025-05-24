@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct AnalysisView: View {
-    @Binding var analysis: FoodAnalysis?
     @ObservedObject var viewModel: FoodAnalyzerViewModel
     @Environment(\.dismiss) private var dismiss
     
@@ -20,7 +19,7 @@ struct AnalysisView: View {
                             .font(Theme.TextStyle.body)
                             .foregroundColor(Theme.text)
                     }
-                } else if let analysis = analysis {
+                } else if let analysis = viewModel.currentAnalysis {
                     ScrollView {
                         VStack(spacing: Theme.Layout.spacing) {
                             if let image = viewModel.selectedImage {
@@ -114,7 +113,7 @@ struct AnalysisView: View {
                     }
                 }
                 
-                if analysis != nil {
+                if viewModel.currentAnalysis != nil {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Save") {
                             viewModel.saveAnalysis()

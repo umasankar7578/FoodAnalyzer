@@ -29,9 +29,33 @@
 		150723572DDF4F4200818E08 /* FoodAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1507262A2DE19BAE00818E08 /* Exceptions for "FoodAnalyzer" folder in "FoodAnalyzer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Localizable.xcstrings,
+			);
+			target = 1507233C2DDF4F3800818E08 /* FoodAnalyzer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		150726822DE19ED300818E08 /* Exceptions for "FoodAnalyzer" folder in "Compile Sources" phase from "FoodAnalyzer" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 150723392DDF4F3800818E08 /* Sources */;
+			membershipExceptions = (
+				Localizable.xcstrings,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1507233F2DDF4F3800818E08 /* FoodAnalyzer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1507262A2DE19BAE00818E08 /* Exceptions for "FoodAnalyzer" folder in "FoodAnalyzer" target */,
+				150726822DE19ED300818E08 /* Exceptions for "FoodAnalyzer" folder in "Compile Sources" phase from "FoodAnalyzer" target */,
+			);
 			path = FoodAnalyzer;
 			sourceTree = "<group>";
 		};

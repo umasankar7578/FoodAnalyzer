@@ -53,26 +53,27 @@ class OpenAIService {
         print("Response status code: \(httpResponse.statusCode)")
         print("Response headers: \(httpResponse.allHeaderFields)")
 
+        return ""
+
         
-        
-        if httpResponse.statusCode != 200 {
-            if let errorResponse = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-               let error = errorResponse["error"] as? [String: Any],
-               let message = error["message"] as? String {
-                throw OpenAIError.apiError("API Error (\(httpResponse.statusCode)): \(message)")
-            } else {
-                throw OpenAIError.apiError("API Error: Status code \(httpResponse.statusCode)")
-            }
-        }
-        
-        do {
-            let response = try JSONDecoder().decode(OpenAIResponse.self, from: data)
-            return response.choices.first?.message.content ?? "No analysis available"
-        } catch {
-            print("Decoding error: \(error)")
-            print("Response data: \(String(data: data, encoding: .utf8) ?? "Unable to read response")")
-            throw error
-        }
+//        if httpResponse.statusCode != 200 {
+//            if let errorResponse = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+//               let error = errorResponse["error"] as? [String: Any],
+//               let message = error["message"] as? String {
+//                throw OpenAIError.apiError("API Error (\(httpResponse.statusCode)): \(message)")
+//            } else {
+//                throw OpenAIError.apiError("API Error: Status code \(httpResponse.statusCode)")
+//            }
+//        }
+//        
+//        do {
+//            let response = try JSONDecoder().decode(OpenAIResponse.self, from: data)
+//            return response.choices.first?.message.content ?? "No analysis available"
+//        } catch {
+//            print("Decoding error: \(error)")
+//            print("Response data: \(String(data: data, encoding: .utf8) ?? "Unable to read response")")
+//            throw error
+//        }
     }
 }
 

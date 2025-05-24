@@ -95,17 +95,50 @@ class FoodAnalyzerViewModel: ObservableObject {
         var carbs = "0g"
         var fat = "0g"
         var ingredients: [String] = []
-        
-        
         return FoodAnalysis(
-            foodName: foodName,
-            calories: calories,
-            protein: protein,
-            carbs: carbs,
-            fat: fat,
-            ingredients: ingredients
+            foodName: "Chicken Salad",
+            calories: 350,
+            protein: "25g",
+            carbs: "15g",
+            fat: "12g",
+            ingredients: ["Chicken", "Lettuce", "Tomatoes", "Olive Oil"]
         )
+
         
+//        let lines = text.components(separatedBy: .newlines)
+//        for line in lines {
+//            let lowercased = line.lowercased()
+//            if lowercased.contains("calories") {
+//                let numbers = line.components(separatedBy: CharacterSet.decimalDigits.inverted)
+//                    .filter { !$0.isEmpty }
+//                if let firstNumber = numbers.first,
+//                   let cal = Int(firstNumber) {
+//                    calories = cal
+//                }
+//            } else if lowercased.contains("protein") {
+//                protein = line.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespaces) ?? "0g"
+//            } else if lowercased.contains("carb") {
+//                carbs = line.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespaces) ?? "0g"
+//            } else if lowercased.contains("fat") {
+//                fat = line.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespaces) ?? "0g"
+//            } else if lowercased.contains("ingredients") {
+//                let ingredientList = line.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespaces) ?? ""
+//                ingredients = ingredientList.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespaces) }
+//            } else if foodName == "Unknown Food" && !line.isEmpty {
+//                foodName = line.trimmingCharacters(in: .whitespaces)
+//            }
+//        }
+//        
+//        print("Parsed analysis: \(foodName) with calories: \(calories)")
+//        
+//        return FoodAnalysis(
+//            foodName: foodName,
+//            calories: calories,
+//            protein: protein,
+//            carbs: carbs,
+//            fat: fat,
+//            ingredients: ingredients
+//        )
     }
     
     private func loadHistory() {
